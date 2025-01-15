@@ -1,0 +1,33 @@
+{
+	"name": "@acme/cli",
+	"version": "0.1.0",
+	"module": "src/main.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "bun src/main.ts cli",
+		"build:npm": "unbuild && bun build.optim.ts",
+		"build:jsr": "bun build.optim.ts --jsr",
+		"build": "bun build:npm && bun build:jsr",
+		"pub:npm": "bun build.publish.ts",
+		"pub:jsr": "bun build.publish.ts --jsr",
+		"pub:dry": "bun build.publish.ts --dry-run",
+		"pub": "bun publish.ts",
+		"latest": "bun update --latest"
+	},
+	"dependencies": {
+		"@reliverse/prompts": "^1.4.8",
+		"@reliverse/relinka": "^1.2.8",
+		"destr": "^2.0.3",
+		"execa": "^9.5.2",
+		"fs-extra": "^11.2.0",
+		"globby": "^14.0.2",
+		"mri": "^1.2.0",
+		"pathe": "^2.0.1"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.1.16",
+		"@types/fs-extra": "^11.0.4",
+		"typescript": "^5.7.3",
+		"unbuild": "^3.3.1"
+	}
+}

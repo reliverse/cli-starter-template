@@ -1,0 +1,52 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./src/*"],
+			"#/*": ["./addons/*"]
+		},
+		"target": "ES2023",
+		"module": "NodeNext",
+		"moduleDetection": "force",
+		"moduleResolution": "nodenext",
+		"lib": ["DOM", "DOM.Iterable", "ES2023"],
+		"resolveJsonModule": true,
+		"verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"noPropertyAccessFromIndexSignature": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"jsx": "preserve",
+		"allowJs": true,
+		"strict": true,
+		"noEmit": true,
+		"noImplicitOverride": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"strictNullChecks": true,
+		"noImplicitAny": true
+	},
+	"include": [
+		"build.optim.ts",
+		"build.config.ts",
+		"vitest.config.ts",
+		"src/**/*.js",
+		"src/**/*.ts",
+		"src/**/*.tsx",
+		"reset.d.ts",
+		"build.publish.ts",
+		"build.pub.ts",
+		"drizzle.config.ts",
+		"eslint.config.js",
+		"publish.ts"
+	],
+	"exclude": ["node_modules", "dist-jsr", "dist-npm"]
+}
